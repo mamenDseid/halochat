@@ -11,6 +11,7 @@ export const metadata = {
   description: "A Next.js 14 Chat App ",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
