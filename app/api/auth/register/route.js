@@ -2,6 +2,7 @@ import User from "@models/User";
 import { connectToDB } from "@mongodb";
 import { hash } from "bcryptjs";
 
+
 export const POST = async (req, res) => {
   try {
     await connectToDB();
