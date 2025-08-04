@@ -32,7 +32,7 @@ export const connectToDB = async (MONGODB_URL) => {
 
 
   if (MONGODB_URL === undefined) {
-    MONGODB_URI = process.env.MONGODB_URL;
+    MONGODB_URL = process.env.MONGODB_URL;
   }
 
   if (cached.conn) {
@@ -40,7 +40,7 @@ export const connectToDB = async (MONGODB_URL) => {
   }
 
   if (!MONGODB_URL) {
-    throw new Error('MONGODB_URI is missing');
+    throw new Error('MONGODB_URL is missing');
   }
 
   cached.promise = cached.promise || mongoose.connect(MONGODB_URL, {
